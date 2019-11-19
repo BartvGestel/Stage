@@ -15,8 +15,10 @@
 </head>
 
 <body>
-    <p class="container welcomeP">Welcome</p>
-    <button class="frontendButton" href="loginPage.php">click here</button>    
+    <div class="container welcomeD">
+        <p class="container justify-content-center welcomeP">Welcome</p>
+        <a class="container welcomeA" href="../Login/loginPage.php">Click Here</a>
+    </div>
 </body>
 
  
