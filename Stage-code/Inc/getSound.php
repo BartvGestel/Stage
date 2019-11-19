@@ -1,6 +1,10 @@
 <?php
-//including the functions
-include("inc/functions.php");
+include("Session.php");
+if($_SESSION['loggedIn'] == true)
+{
+    //including the files
+include("functions.php");
+include("../keyboard/keyboard/index.php");
 //getting the getSound function
 $Sound = getSound();
 ?>
@@ -33,11 +37,14 @@ $Sound = getSound();
             <div id="number1" class="number" style="display: none">1</div>
             <a class="playsound"><img src="images/sound.png" onclick="playAudio(<?php echo $Sounds['soundMrut']?>)" class="card-img-top" alt="playImage"></a>
             <div class="press">Press Button For Sound And Play The Game!</div>
-<div class="input-group flex-nowrap">
+<!-- <div class="input-group flex-nowrap">
   <div class="input-group-prepend">
   <input type="text" class="form-control" placeholder="Correct Word" aria-label="inputgroup" aria-describedby="addon-wrapping">
     </div>
-</div>
+</div> -->
+<input type="text" id="search_field">
+<div id="keyboard"></div>
+
      </div>
     </div>
     <?php
@@ -112,9 +119,9 @@ $(".start").click(function(){
                                     {
                                         $( ".playsound" ).fadeOut( "slow")
                                         $( ".press" ).fadeOut( "slow")
-                                            $( ".input-group" ).fadeIn( "slow", function()
+                                            $( "#search_field" ).fadeIn( "slow", function()
                                             {
-                                            
+                                                $( "#keyboard" ).fadeIn( "slow")
                                             });
                                         });
                                     });
@@ -127,8 +134,9 @@ $(".start").click(function(){
         });
     });
 }
-
 </script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>"../keyboard/inc/js/jkeyboard.js"</script>
 <!-- loading the boodstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -137,3 +145,10 @@ $(".start").click(function(){
     <script src="JS/main.js"></script>
 </body>
 </html>
+<?php
+}
+else
+{
+    header("location: ../demo-frontend/demofrontend.php");
+}
+?>

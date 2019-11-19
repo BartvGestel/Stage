@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['u_last'] = $row['userLast'];
                     $_SESSION['u_uid'] = $row['userUid'];
                     $_SESSION['loggedIn'] = "true";
-                    header('Location: ../index.php?login=succesfull');
+                    header('Location: ../../stage-code/index.php');
                     exit();
                 }
             }

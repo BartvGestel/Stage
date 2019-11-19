@@ -20,6 +20,7 @@
         <ul>
             <li><a href="index.php">Home</a></li>    
             <li><a href="yourInfo.php">Your information</a></li>
+            <li><a href="../stage code/Inc/getSound.php">Play the game</a></li>
         </ul>
     </nav>
 </header>

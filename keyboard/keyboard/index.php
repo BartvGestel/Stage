@@ -20,7 +20,7 @@
 
         #search_field{
 
-            display: block;
+            display: none;
 
             margin: 0 auto;
 
@@ -39,15 +39,6 @@
 </head>
 
 <body>
-
-    
-
-    <input type="text" id="search_field">
-
-    <div id="keyboard"></div>
-
-    
-
 
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
