@@ -1,0 +1,106 @@
+body {
+    background-image: url("../images/bg/bg4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;   
+    font-family: 'Mukta', sans-serif;
+    height: 100%;
+}
+
+.card{
+    width: 70%; 
+    position: relative;
+    left: 15%;
+    margin-top: 25px;
+}
+
+.alert{
+    font-size: 20px; 
+    color: black; 
+    height: 3rem; 
+    text-align: center;
+    position: relative;
+} 
+
+.card-body{
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.playsound{
+    display: none;
+}
+
+.playsound img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;;
+}
+
+.input-group{
+    margin-top: 2%;
+    width: 60%;
+    margin-left: 20%;
+    display: none;
+}
+
+#buttons{
+    width: 100px;
+    height: 100px;
+    margin-left: 43%;
+    background-color: lightgreen;
+}
+
+#button{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#img1 {
+    display: none;
+    height: 200px;
+    width: 200px;
+    margin-left: 43%;
+  }
+
+#img2 {
+display: none;
+height: 200px;
+width: 200px;
+margin-left: 43%;
+}
+
+.dropdown{
+    margin-bottom: 10px;
+}
+
+.number
+{
+	text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: darkblue;
+    text-shadow: 0 0px 5px rgba(0, 0, 0, 1);
+    width: 50px;
+    margin: 0px auto;
+}
+
+#number1{
+color: red;
+}
+#number2{
+    color: orange;
+}
+#number3{
+    color: blue;
+}
+
+.start img{
+    cursor: pointer;
+}
+
+.press{
+    display: none;;
+}
