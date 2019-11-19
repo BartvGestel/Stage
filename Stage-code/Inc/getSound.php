@@ -3,6 +3,7 @@ include("Session.php");
 if($_SESSION['loggedIn'] == true)
 {
     //including the files
+    include("header.php");
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
