@@ -35,9 +35,7 @@ $Sound = getSound();
             <div class="press">Press Button For Sound And Play The Game!</div>
 <div class="input-group flex-nowrap">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="addon-wrapping"><i class="fab fa-wordpress-simple"></i></span>
-  <input type="text" class="form-control" placeholder="fill in the wright word" aria-label="inputgroup" aria-describedby="addon-wrapping">
-  <span class="input-group-text" id="addon-wrapping"><i class="fab fa-wordpress-simple"></i></span>
+  <input type="text" class="form-control" placeholder="Correct Word" aria-label="inputgroup" aria-describedby="addon-wrapping">
     </div>
 </div>
      </div>

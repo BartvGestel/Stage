@@ -104,3 +104,7 @@ color: red;
 .press{
     display: none;;
 }
+
+.form-control{
+    text-align: center;
+}
