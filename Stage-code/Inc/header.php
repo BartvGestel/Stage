@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-    <meta name="description" content="WordGame">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>WordGame Maik Rutten</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-<nav class="navbar navbar-expand-sm navbar-light bg-dark" style="margin-top: 1%; border-radius: 20px; border: 2px white solid;">
-  <a class="navbar-brand" style="color: white;" href="#">WordGame</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="../login/yourinfo.php">Your Info</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="../demo-frontend/demofrontend.php">log out</a>
-      </li>
-    </ul>
-  </div>
+<!-- a simple banner created in bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-`light`" style="background-color: black; border-radius: 20px; border: 2px solid white;">
+    <a class="navbar-brand Items" href="#">WordGame</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active Items">
+                <a class="nav-link" href="Index.php"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item Items">
+                <a class="nav-link" href="../login/yourinfo.php"><i class="fas fa-info-circle"></i></i> Your Info</a>
+            </li>
+            <li class="nav-item Items">
+                <a class="nav-link" href="../demo-frontend/demofrontend.php"><i class="fas fa-sign-out-alt"></i> LogOut</a>
+            </li>
+</ul>
+    </div>
 </nav>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="JS/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="JS/main.js"></script>
-</body>
-</html>

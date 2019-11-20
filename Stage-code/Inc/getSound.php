@@ -3,7 +3,7 @@ include("Session.php");
 if($_SESSION['loggedIn'] == true)
 {
     //including the files
-    include("header.php");
+     include("header.php");
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
@@ -64,7 +64,7 @@ $Sound = getSound();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WordGame Maik Rutten</title>
+    <title>WordGame</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Font Awsome CSS -->
@@ -74,7 +74,6 @@ $Sound = getSound();
      <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    
 <script>
 //a function to play the music
 function playAudio(url) {
@@ -156,7 +155,7 @@ var timerId = setInterval(function(){
 <!-- loading the boodstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="JS/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="JS/main.js"></script>
 </body>
