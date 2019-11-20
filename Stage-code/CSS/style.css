@@ -13,6 +13,7 @@ body {
     position: relative;
     left: 15%;
     margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .alert{
@@ -107,4 +108,18 @@ color: red;
 
 .form-control{
     text-align: center;
+}
+
+.timer{
+    background-color: black;
+    width: 175px;
+    margin: auto;
+    border-radius: 20px;
+    border: 2px white solid;
+}
+
+#countTime{
+    color: white;
+    font-size: 50px;
+    margin-left: 5%;
 }

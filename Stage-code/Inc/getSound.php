@@ -14,7 +14,7 @@ $Sound = getSound();
     foreach($Sound as $k => $Sounds)
     {   
     ?>    
-    <div class="card">
+    <div class="card" style="border: 3px solid darkgreen;">
         <div class="alert alert-info" role="alert">WordGame</div>
             <div class="card-body"> 
                 <div class="cardfade">
@@ -45,8 +45,10 @@ $Sound = getSound();
 </div> -->
 <input type="text" id="search_field">
 <div id="keyboard"></div>
-
      </div>
+    </div>
+    <div class="timer">
+    <h1 id="countTime"></h1>
     </div>
     <?php
     }
@@ -135,6 +137,19 @@ $(".start").click(function(){
         });
     });
 }
+
+var countdown = 30 * 60 * 1000;
+var timerId = setInterval(function(){
+  countdown -= 1000;
+  var min = Math.floor(countdown / (60 * 1000));
+  var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);
+  if (countdown <= 0) {
+     alert("Game Over!");
+     clearInterval(timerId);
+  } else {
+     $("#countTime").html(min + " : " + sec);
+  }
+}, 1000);
 </script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>"../keyboard/inc/js/jkeyboard.js"</script>

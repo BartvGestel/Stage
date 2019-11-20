@@ -1,4 +1,7 @@
 body{
-	background-color: lightgray;
+	background-image: url("../../stage-code/images/bg/bg4.png");
 }
-  
+
+.container{
+	margin-top: 150px;
+}
