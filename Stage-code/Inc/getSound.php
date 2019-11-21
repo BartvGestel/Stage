@@ -7,12 +7,24 @@ if($_SESSION['loggedIn'] == true)
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
-$Sound = getSound();
+$sql="SELECT count(*) as total from sound";
+$result = mysqli_query($conn, $sql);
+$rows = $result->fetch_all(MYSQLI_ASSOC);
+foreach($rows as $key => $value){
+    $wordnumber = $value["total"];
+}
+
+$sqlword = "SELECT Word, SoundMrut FROM  sound WHERE typeId=" . rand(1, $wordnumber);
+$resultword = mysqli_query($conn, $sqlword);
+$rowsword = $resultword->fetch_all(MYSQLI_ASSOC);
+foreach($rowsword as $keyword => $worddata){
+    $word = $worddata['Word'];
+    $audio = $worddata['SoundMrut'];
+}
 ?>
 
 <?php
-    foreach($Sound as $k => $Sounds)
-    {   
+      
     ?>    
     <div class="card" style="border: 3px solid black;">
         <div class="alert " role="alert">WordGame</div>
@@ -37,15 +49,17 @@ $Sound = getSound();
             <div id="number3" class="number" style="display: none">3</div>
             <div id="number2" class="number" style="display: none">2</div>
             <div id="number1" class="number" style="display: none">1</div>
-            <a class="playsound"><img src="images/sound.png" onclick="playAudio(<?php echo $Sounds['soundMrut']?>)" class="card-img-top" alt="playImage"></a>
+            <a class="playsound"><img src="images/sound.png" onclick="playAudio(<?php echo $audio?>)" class="card-img-top" alt="playImage"></a>
             <div class="press">Press Button For Sound And Play The Game!</div>
 <!-- <div class="input-group flex-nowrap">
   <div class="input-group-prepend">
   <input type="text" class="form-control" placeholder="Correct Word" aria-label="inputgroup" aria-describedby="addon-wrapping">
     </div>
 </div> -->
-<input type="text" class="text3">
-<input class="btn btn-light Check" type="submit" value="Check Word">
+<form method="POST">
+<input type="text" class="text3" name="answer">
+<input class="btn btn-light Check" type="submit" value="Check Word" name="submit">
+</form>
 <div id="keyboard"></div>
      </div>
     </div>
@@ -53,13 +67,29 @@ $Sound = getSound();
     <h1 id="countTime"></h1>
     </div>
     <?php
+    
+
+    if(isset($_POST['submit'])){
+        $answer = $_POST['answer'];
+        
+        if($answer == $word){
+            ?> <script>
+                right();
+            </script> <?php
+        echo "correct";
+        }else{
+            ?> <script>
+                wrong();
+            </script> <?php
+            echo "incorrect";
+        }
     }
 ?>
 <!-- 2 buttons that show a image when it's right or wrong -->
 <!-- <input id="buttons" type="submit" name="button" value="right" onclick="right();"/>
-<input id="button" type="submit" name="button" value="wrong" onclick="wrong();"/>
+<input id="button" type="submit" name="button" value="wrong" onclick="wrong();"/> -->
 <img id="img1" src="images/starRight.png">
-<img id="img2" src="images/starWrong.png"> -->
+<img id="img2" src="images/starWrong.png">
 <!DOCTYPE html>
 <html lang="en">
 <head>
