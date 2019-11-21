@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../stage-code/images/icon.ico">
     <title>Login</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -32,11 +33,11 @@ if(strpos($fullURL, "login=invalid") == true) {
                 <H2 class="Login-Title"><i class="fas fa-sign-in-alt"></i> Login</H2>
                 <form class="Login-Form" action="Inc/LoginLoad.php" method="POST">
                     <div class="form-group">
-                        <label>Username</label>
+                    <i class="fas fa-user"></i><label>Username</label>
                         <input type="text" class="form-control" name="uid" required="required" placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                    <i class="fas fa-lock"></i><label>Password</label>
                         <input type="password" class="form-control" name="pwd" required="required" placeholder="Password">
                     </div>
                     <div class="row justify-content-around">

@@ -38,19 +38,19 @@
         <H2 class="Login-Title"><i class="fas fa-sign-in-alt"></i> Register</H2>
         <form class="Login-Form" action="Inc/RegisterLoad.php" method="POST">
             <div class="form-group">
-                <label class="Label">First Name</label>
+            <i class="fas fa-hand-point-right"></i><label class="Label">First Name</label>
                 <input type="text" class="form-control" name="first"  placeholder="Enter First Name">
             </div>
             <div class="form-group">
-                <label class="Label">Last Name</label>
+            <i class="fas fa-hand-point-right"></i><label class="Label">Last Name</label>
                 <input type="text" class="form-control" name="last"  placeholder="Enter Last Name">
             </div>
             <div class="form-group">
-                <label class="Label">Username</label>
+            <i class="fas fa-user"></i><label class="Label">Username</label>
                 <input type="text" class="form-control" name="uid"  placeholder="Enter Username">
             </div>
             <div class="form-group">
-                <label class="Label">Password</label>
+            <i class="fas fa-lock"></i><label class="Label">Password</label>
                 <input type="password" class="form-control" name="pwd"  placeholder="Enter Password">
             </div>
             <!-- submit button submits data to registerLoad.php, Login button goes to Login.php -->

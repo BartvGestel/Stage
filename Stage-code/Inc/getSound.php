@@ -14,19 +14,20 @@ $Sound = getSound();
     foreach($Sound as $k => $Sounds)
     {   
     ?>    
-    <div class="card" style="border: 3px solid darkgreen;">
-        <div class="alert alert-info" role="alert">WordGame</div>
+    <div class="card" style="border: 3px solid black;">
+        <div class="alert " role="alert">WordGame</div>
             <div class="card-body"> 
                 <div class="cardfade">
                 <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Word Level
+                <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    WordList
                 </button>
-                <!-- a drop down to chose what level of game you want to play-->
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">level1</a>
-                    <a class="dropdown-item" href="#">level2</a>
-                    <a class="dropdown-item" href="#">level3</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Level1</a>
+                    <a class="dropdown-item" href="#">Level2</a>
+                    <a class="dropdown-item" href="#">Level3</a>
+                </div>
                 </div>
                 </div>
             <!-- making use of a onclick image so when you press on it there will be some sound playing
@@ -158,6 +159,8 @@ var timerId = setInterval(function(){
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="JS/main.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 <?php

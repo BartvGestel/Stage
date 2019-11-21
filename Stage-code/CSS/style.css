@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/bg/bg4.png");
+    background-image: url("../images/bg/bg4.png");   
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,19 +13,28 @@ body {
     left: 15%;
     margin-top: 25px;
     margin-bottom: 50px;
+    border-radius: 0px 0px 40px 40px;
+}
+
+.card-text{
+    color: #66fcf1;
 }
 
 .alert{
     font-size: 20px; 
-    color: black; 
+    color: #66fcf1;    
     height: 3rem; 
     text-align: center;
     position: relative;
+    background-color: darkblue;
+    margin-bottom: -10px;
+    border: 1px solid white;
 } 
 
 .card-body{
-    background-color: lightgreen;
+    background-color: blue;
     text-align: center;
+    border-radius: 0px 0px 40px 40px;;
 }
 
 .playsound{
@@ -94,7 +103,7 @@ color: red;
     color: orange;
 }
 #number3{
-    color: blue;
+    color: yellow;
 }
 
 .start img{
@@ -102,7 +111,8 @@ color: red;
 }
 
 .press{
-    display: none;;
+    display: none;
+    color: white;
 }
 
 .form-control{
@@ -110,7 +120,7 @@ color: red;
 }
 
 .timer{
-    background-color: black;
+    background-color: darkblue;
     width: 175px;
     margin: auto;
     border-radius: 20px;
@@ -118,7 +128,8 @@ color: red;
 }
 
 #countTime{
-    color: white;
+    color: #66fcf1;
     font-size: 50px;
     margin-left: 5%;
+
 }

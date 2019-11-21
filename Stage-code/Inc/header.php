@@ -1,5 +1,5 @@
 <!-- a simple banner created in bootstrap -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-`light`" style="background-color: black; border-radius: 20px; border: 2px solid white;">
+<nav class="navbar navbar-expand-lg navbar-light bg-`info`" style="background-color: white; border-radius: 20px; border: 2px solid black;">
     <a class="navbar-brand Items" href="#">WordGame</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
