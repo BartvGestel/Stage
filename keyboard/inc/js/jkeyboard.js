@@ -34,7 +34,7 @@
 
             layout: "english",
 
-            selectable: ['maltese'],
+            selectable: ['azeri', 'english', 'german', 'russian'],
 
             input: $('#input'),
 
@@ -74,6 +74,64 @@
 
             text: '&nbsp;'
 
+        },
+
+        numeric_switch: {
+
+            text: '123',
+
+            command: function () {
+
+                this.createKeyboard('numeric');
+
+                this.events();
+
+            }
+
+        },
+
+        layout_switch: {
+
+            text: '&nbsp;',
+
+            command: function () {
+
+                var l = this.toggleLayout();
+
+                this.createKeyboard(l);
+
+                this.events();
+
+            }
+
+        },
+
+        character_switch: {
+
+            text: 'ABC',
+
+            command: function () {
+
+                this.createKeyboard(layout);
+
+                this.events();
+
+            }
+
+        },
+
+        symbol_switch: {
+
+            text: '#+=',
+
+            command: function () {
+
+                this.createKeyboard('symbolic');
+
+                this.events();
+
+            }
+
         }
 
     };
@@ -84,15 +142,89 @@
 
     var layouts = {
 
-        maltese: [
+        azeri: [
 
-            ['ċ', 'q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p','ż'],
+            ['q', 'ü', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'ö', 'ğ'],
 
-            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l','ġ','ħ'],
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ı', 'ə'],
+
+            ['shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'ç', 'ş', 'backspace'],
+
+            ['numeric_switch', 'layout_switch', 'space', 'return']
+
+        ],
+
+        english: [
+
+            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',],
+
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',],
+
+            ['shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'backspace'],
+
+            ['numeric_switch', 'layout_switch', 'space', 'return']
+
+        ],
+
+        german: [
+
+            ['q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p','ü','ß'],
+
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l','ö','ä'],
 
             ['shift', 'y', 'x', 'c', 'v', 'b', 'n', 'm', 'backspace'],
 
-            ['space', 'return']
+            ['numeric_switch', 'layout_switch', 'space', 'return']
+
+        ],
+
+        russian: [
+
+            ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х'],
+
+            ['ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э'],
+
+            ['shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', 'backspace'],
+
+            ['numeric_switch', 'layout_switch', 'space', 'return']
+
+        ],
+
+        numeric: [
+
+            ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+
+            ['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'],
+
+            ['symbol_switch', '.', ',', '?', '!', "'", 'backspace'],
+
+            ['character_switch', 'layout_switch', 'space', 'return'],
+
+        ],
+
+        numbers_only: [
+
+            ['1', '2', '3',],
+
+            ['4', '5', '6',],
+
+            ['7', '8', '9',],
+
+            ['0', 'return', 'backspace'],
+
+        ],
+
+        symbolic: [
+
+            ['[', ']', '{', '}', '#', '%', '^', '*', '+', '='],
+
+            ['_', '\\', '|', '~', '<', '>'],
+
+            ['numeric_switch', '.', ',', '?', '!', "'", 'backspace'],
+
+            ['character_switch', 'layout_switch', 'space', 'return'],
+
+
 
         ]
 

@@ -8,7 +8,7 @@
 
     <title>Keyboard Example</title>
 
-    <link rel="stylesheet" href="../inc/css/jkeyboard.css">
+    <link rel="stylesheet" href="inc/css/jkeyboard.css">
 
     <style>
 
@@ -52,25 +52,25 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
-    <script src="../inc/js/jkeyboard.js"></script>
+    <script src="inc/js/jkeyboard.js"></script>
 
     <script>
 
         $('#keyboard').jkeyboard({
 
-            layout: "maltese",
+            layout: "english_capital",
 
             input: $('#search_field'),
 
             customLayouts: {
 
-                selectable: ["maltese"],
+                selectable: ["english_capital"],
 
                 english_capital: [
 
-                    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',],
+                    ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
 
-                    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',],
+                    ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
 
                     ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
 
