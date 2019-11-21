@@ -8,10 +8,12 @@ body{
 
 .firstname{
 	font-size: 30px;
+	text-transform: capitalize;
 }
 
 .lastname{
 	font-size: 30px;
+	text-transform: capitalize;
 }
 
 .username{
