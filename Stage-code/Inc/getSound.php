@@ -45,6 +45,7 @@ $Sound = getSound();
     </div>
 </div> -->
 <input type="text" class="text3">
+<input class="btn btn-light Check" type="submit" value="Check Word">
 <div id="keyboard"></div>
      </div>
     </div>
@@ -143,6 +144,7 @@ $(".start").click(function(){
                                             $( ".text3" ).fadeIn( "slow", function()
                                             {
                                                 $( "#keyboard" ).fadeIn( "slow")
+                                                $( ".Check" ).fadeIn( "slow")
                                             });
                                         });
                                     });
