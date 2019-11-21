@@ -44,7 +44,7 @@ $Sound = getSound();
   <input type="text" class="form-control" placeholder="Correct Word" aria-label="inputgroup" aria-describedby="addon-wrapping">
     </div>
 </div> -->
-<input type="text" id="search_field">
+<input type="text" class="text3">
 <div id="keyboard"></div>
      </div>
     </div>
@@ -73,6 +73,11 @@ $Sound = getSound();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
      <!-- Custom CSS -->
      <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- KeyBoard CSS -->
+    <link rel="stylesheet" href="../keyboard/inc/css/jkeyboard.css">
+    <!-- The Keyboard -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="../keyboard/inc/js/jkeyboard.js"></script>    
 </head>
 <body>
 <script>
@@ -81,6 +86,19 @@ function playAudio(url) {
   var a = new Audio(url);
   a.play();
 }
+    $('#keyboard').jkeyboard({
+        layout: "english_capital",
+        input: $('.text3'),
+        customLayouts: {
+            selectable: ["english_capital"],
+            english_capital: [
+                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
+                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
+                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
+                ['space', '-', 'backspace']
+                ],
+        }
+    });
 
     function right()
 	{
@@ -122,7 +140,7 @@ $(".start").click(function(){
                                     {
                                         $( ".playsound" ).fadeOut( "slow")
                                         $( ".press" ).fadeOut( "slow")
-                                            $( "#search_field" ).fadeIn( "slow", function()
+                                            $( ".text3" ).fadeIn( "slow", function()
                                             {
                                                 $( "#keyboard" ).fadeIn( "slow")
                                             });
