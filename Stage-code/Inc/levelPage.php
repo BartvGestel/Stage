@@ -1,3 +1,7 @@
+<?php
+    include("Session.php");
+    include("../../login/inc/databaseconn.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

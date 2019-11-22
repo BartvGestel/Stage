@@ -3,7 +3,7 @@ include("Session.php");
 if($_SESSION['loggedIn'] == true)
 {
     //including the files
-     include("header.php");
+include("header.php");
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
@@ -54,15 +54,14 @@ foreach($rowsword as $keyword => $worddata){
     <div class="timer">
     <h1 id="countTime"></h1>
     </div>
-    <?php
-    
 
+    <?php
     if(isset($_POST['submit'])){
         $answer = $_POST['answer'];
         if($answer == $word){
             echo "<div class=rightwrong>";
             echo "<img id='img1' src='images/starRight.png'>";
-            echo " Correct";
+            echo " Correct"; 
             echo "</div>";
         }else{
             echo "<div class=rightwrong>";
@@ -72,9 +71,11 @@ foreach($rowsword as $keyword => $worddata){
         }
     }
 ?>
-<!-- 2 buttons that show a image when it's right or wrong -->
-<!-- <input id="buttons" type="submit" name="button" value="right" onclick="right();"/>
-<input id="button" type="submit" name="button" value="wrong" onclick="wrong();"/> -->
+
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
