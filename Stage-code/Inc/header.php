@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active Items">
-                <a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-link" href="inc/levelPage.php"><i class="fas fa-home"></i> Home</a>
             </li>
             <li class="nav-item Items">
                 <a class="nav-link" href="../login/yourinfo.php"><i class="fas fa-info-circle"></i></i> Your Info</a>

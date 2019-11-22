@@ -14,7 +14,7 @@ foreach($rows as $key => $value){
     $wordnumber = $value["total"];
 }
 
-$sqlword = "SELECT Word, SoundMrut FROM  sound WHERE typeId=" . rand(1, $wordnumber);
+$sqlword = "SELECT Word, SoundMrut FROM sound WHERE typeId=" . rand(1, $wordnumber);
 $resultword = mysqli_query($conn, $sqlword);
 $rowsword = $resultword->fetch_all(MYSQLI_ASSOC);
 foreach($rowsword as $keyword => $worddata){
@@ -30,18 +30,6 @@ foreach($rowsword as $keyword => $worddata){
         <div class="alert " role="alert">WordGame</div>
             <div class="card-body"> 
                 <div class="cardfade">
-                <div class="dropdown">
-                <div class="btn-group">
-                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    WordList
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Level1</a>
-                    <a class="dropdown-item" href="#">Level2</a>
-                    <a class="dropdown-item" href="#">Level3</a>
-                </div>
-                </div>
-                </div>
             <!-- making use of a onclick image so when you press on it there will be some sound playing
             getting only the soundMrut from the DataBase -->     
                 <div class="start"><img src="images/play.png" onclick="fadeout()"></div> 
@@ -71,25 +59,22 @@ foreach($rowsword as $keyword => $worddata){
 
     if(isset($_POST['submit'])){
         $answer = $_POST['answer'];
-        
         if($answer == $word){
-            ?> <script>
-                right();
-            </script> <?php
-        echo "correct";
+            echo "<div class=rightwrong>";
+            echo "<img id='img1' src='images/starRight.png'>";
+            echo " Correct";
+            echo "</div>";
         }else{
-            ?> <script>
-                wrong();
-            </script> <?php
+            echo "<div class=rightwrong>";
+            echo "<img id='img2' src='images/starWrong.png'>";
             echo "incorrect";
+            echo "</div>";
         }
     }
 ?>
 <!-- 2 buttons that show a image when it's right or wrong -->
 <!-- <input id="buttons" type="submit" name="button" value="right" onclick="right();"/>
 <input id="button" type="submit" name="button" value="wrong" onclick="wrong();"/> -->
-<img id="img1" src="images/starRight.png">
-<img id="img2" src="images/starWrong.png">
 <!DOCTYPE html>
 <html lang="en">
 <head>
