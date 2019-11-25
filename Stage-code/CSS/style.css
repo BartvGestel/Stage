@@ -164,3 +164,11 @@ color: red;
 .btn{
     margin: auto;
 }
+
+.input-group{
+    width: 25%;
+}
+
+.addword{
+margin-left: 40%;
+}

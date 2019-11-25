@@ -24,11 +24,19 @@
     <script src="../keyboard/inc/js/jkeyboard.js"></script>    
 </head>
 <body>
+<a class="btn btn-light" href="addwordlist.php" role="button">Add Wordlist</a>
 <div class="level">
     <div class="levelbutton">
         <a class="btn btn-light" href="../index.php?levelid=1" role="button">Level1</a>
         <a class="btn btn-light" href="../index.php?levelid=2" role="button">Level2</a>
         <a class="btn btn-light" href="../index.php?levelid=3" role="button">Level3</a>
+        <a class="btn btn-light" href="../index.php?levelid=4" role="button">Level4</a>
+        <a class="btn btn-light" href="../index.php?levelid=5" role="button">Level5</a>
+        <a class="btn btn-light" href="../index.php?levelid=6" role="button">Level6</a>
+        <a class="btn btn-light" href="../index.php?levelid=7" role="button">Level7</a>
+        <a class="btn btn-light" href="../index.php?levelid=8" role="button">Level8</a>
+        <a class="btn btn-light" href="../index.php?levelid=9" role="button">Level9</a>
+        <a class="btn btn-light" href="../index.php?levelid=10" role="button">Level10</a>
     </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
