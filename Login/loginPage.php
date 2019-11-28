@@ -14,9 +14,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- KeyBoard CSS -->
     <link rel="stylesheet" href="../keyboard/inc/css/jkeyboard.css">
-    <!-- The Keyboard -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="../keyboard/inc/js/jkeyboard.js"></script>
 <body>
 <div id="error">
 <?php
@@ -40,43 +37,9 @@ if(strpos($fullURL, "login=invalid") == true) {
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control text1" name="uid" required="required" placeholder="Username">
-                        <div class="keyboard"></div>
-                        <script>
-                            $('.keyboard').jkeyboard({
-                                layout: "english_capital",
-                                input: $('.text1'),
-                                customLayouts: {
-                                    selectable: ["english_capital"],
-                                    english_capital: [
-                                    ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                    ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                    ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                    ['space', '-', 'backspace']
-                                    ],
-                                }
-                            });
-                        </script>
-                    </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control text2" name="pwd" required="required" placeholder="Password">
-                        <div class="keyboard1"></div>
-                        <script>
-                            $('.keyboard1').jkeyboard({
-                                layout: "english_capital",
-                                input: $('.text2'),
-                                customLayouts: {
-                                    selectable: ["english_capital"],
-                                    english_capital: [
-                                    ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                    ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                    ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                    ['space', '-', 'backspace']
-                                    ],
-                                }
-                            });
-                        </script>
-                    </div>
                     <div class="row justify-content-around">
                         <a class="btn btn-light" href="signupPage.php"><i class="fas fa-user-plus"></i> Create Account</a>
                         <button type="submit" class="btn btn-light" type="submit" name="submit" value="Login"><i class="far fa-user"></i> Submit</button>

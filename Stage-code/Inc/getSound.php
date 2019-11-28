@@ -3,7 +3,6 @@ include("Session.php");
 if($_SESSION['loggedIn'] == true)
 {
     //including the files
-include("header.php");
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
@@ -27,8 +26,24 @@ foreach($rowsword as $keyword => $worddata){
       
     ?>    
     <div class="card" style="border: 3px solid black;">
-        <div class="alert " role="alert">WordGame</div>
-            <div class="card-body"> 
+        <div class="alert " role="alert">
+        <div id="score1">0</div>
+        <div id="score2">0</div>
+<div id="progressBar">
+  <div class="bar"></div>
+</div>
+<div class="dropdown navbar">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <i class="fas fa-align-justify"></i>
+</button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="../stage-code/index.php">Home</a>
+    <a class="dropdown-item" href="../Login/yourInfo.php">YourInfo</a>
+    <a class="dropdown-item" href="../demo-frontend/demofrontend.php">Log Out</a>
+  </div>
+</div>
+        </div>
+            <div class="card-body transparant"> 
                 <div class="cardfade">
             <!-- making use of a onclick image so when you press on it there will be some sound playing
             getting only the soundMrut from the DataBase -->     
@@ -51,10 +66,11 @@ foreach($rowsword as $keyword => $worddata){
 <div id="keyboard"></div>
      </div>
     </div>
-    <div class="timer">
-    <h1 id="countTime"></h1>
-    </div>
 
+<script> 
+var score1 = 0;
+var score2 = 0;
+</script>
     <?php
     if(isset($_POST['submit'])){
         $answer = $_POST['answer'];
@@ -63,11 +79,23 @@ foreach($rowsword as $keyword => $worddata){
             echo "<img id='img1' src='images/starRight.png'>";
             echo " Correct"; 
             echo "</div>";
+            ?>
+                <script>
+                document.getElementById("score1").innerHTML = score1;
+                score1++;
+                </script>
+            <?php
         }else{
             echo "<div class=rightwrong>";
             echo "<img id='img2' src='images/starWrong.png'>";
             echo "incorrect";
             echo "</div>";
+            ?>
+                <script>
+                document.getElementById("score2").innerHTML = score2;
+                score2++;
+                </script>
+            <?php
         }
     }
 ?>
@@ -174,18 +202,21 @@ $(".start").click(function(){
     });
 }
 
-var countdown = 30 * 60 * 1000;
-var timerId = setInterval(function(){
-  countdown -= 1000;
-  var min = Math.floor(countdown / (60 * 1000));
-  var sec = Math.floor((countdown - (min * 60 * 1000)) / 1000);
-  if (countdown <= 0) {
-     alert("Game Over!");
-     clearInterval(timerId);
-  } else {
-     $("#countTime").html(min + " : " + sec);
-  }
-}, 1000);
+
+function progress(timeleft, timetotal, $element) {
+    var progressBarWidth = timeleft * $element.width() / timetotal;
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
+    if(timeleft < 0){
+        alert("Game Over!");
+    }    
+    else{
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 1000);
+    }
+};
+
+progress(1800, 1800, $('#progressBar'));
 </script>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>"../keyboard/inc/js/jkeyboard.js"</script>

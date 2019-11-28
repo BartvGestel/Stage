@@ -14,15 +14,15 @@ body {
     margin-top: 25px;
     margin-bottom: 50px;
     border-radius: 0px 0px 40px 40px;
+    min-height: 400px;
 }
 
 .card-text{
-    color: #66fcf1;
+    color: black;
 }
 
 .alert{
     font-size: 20px; 
-    color: #66fcf1;    
     height: 3rem; 
     text-align: center;
     position: relative;
@@ -32,9 +32,9 @@ body {
 } 
 
 .card-body{
-    background-color: blue;
+    background-color: lightgray;
     text-align: center;
-    border-radius: 0px 0px 40px 40px;;
+    border-radius: 0px 0px 40px 40px;
 }
 
 .playsound{
@@ -53,19 +53,6 @@ body {
     display: none;
 }
 
-#buttons{
-    width: 100px;
-    height: 100px;
-    margin-left: 43%;
-    background-color: lightgreen;
-}
-
-#button{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-
 #img1 {
     /* display: none; */
     height: 100px;
@@ -76,10 +63,6 @@ body {
 /* display: none; */
 height: 100px;
 width: 100px;
-}
-
-.dropdown{
-    margin-bottom: 10px;
 }
 
 .number
@@ -160,10 +143,10 @@ color: red;
     margin-top: 50px;
     width: 300px;
 }
-
+/* 
 .btn{
     margin: auto;
-}
+} */
 
 .input-group{
     width: 25%;
@@ -171,4 +154,45 @@ color: red;
 
 .addword{
 margin-left: 40%;
+}
+
+#progressBar {
+    width: 30%;
+    margin: 10px auto;
+    height: 22px;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: -2px;
+  }
+  
+  #progressBar div {
+    height: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 25px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: white;
+    box-sizing: border-box;
+    color: black;
+    border-radius: 10px;
+  }
+
+.navbar{
+    float: right;
+    margin-top: -47px;
+}
+
+#score1{
+    color: lightgreen;
+    float: left;
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#score2{
+    color: red;
+    float: left;
+    margin-left: 1%;
+    font-size: 30px;
+    margin-top: -10px;
 }

@@ -47,83 +47,15 @@
             <div class="form-group">
                 <label class="Label">First Name</label>
                 <input type="text" class="form-control text3" name="first"  placeholder="Enter First Name">
-                <div class="keyboard2"></div>
-                <script>
-                    $('.keyboard2').jkeyboard({
-                        layout: "english_capital",
-                        input: $('.text3'),
-                        customLayouts: {
-                            selectable: ["english_capital"],
-                            english_capital: [
-                                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                ['space', '-', 'backspace']
-                                ],
-                        }
-                    });
-                </script>
-            </div>
             <div class="form-group">
                 <label class="Label">Last Name</label>
                 <input type="text" class="form-control text4" name="last"  placeholder="Enter Last Name">
-                <div class="keyboard3"></div>
-                <script>
-                    $('.keyboard3').jkeyboard({
-                        layout: "english_capital",
-                        input: $('.text4'),
-                        customLayouts: {
-                            selectable: ["english_capital"],
-                            english_capital: [
-                                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                ['space', '-', 'backspace']
-                                ],
-                        }
-                    });
-                </script>
-            </div>
             <div class="form-group">
                 <label class="Label">Username</label>
                 <input type="text" class="form-control text5" name="uid"  placeholder="Enter Username">
-                <div class="keyboard4"></div>
-                <script>
-                    $('.keyboard4').jkeyboard({
-                        layout: "english_capital",
-                        input: $('.form-control text5'),
-                        customLayouts: {
-                            selectable: ["english_capital"],
-                            english_capital: [
-                                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                ['space', '-', 'backspace']
-                                ],
-                        }
-                    });
-                </script>
-            </div>
             <div class="form-group">
                 <label class="Label">Password</label>
                 <input type="password" class="form-control text6" name="pwd"  placeholder="Enter Password">
-                <div class="keyboard5"></div>
-                <script>
-                    $('.keyboard5').jkeyboard({
-                        layout: "english_capital",
-                        input: $('.form-control text6'),
-                        customLayouts: {
-                            selectable: ["english_capital"],
-                            english_capital: [
-                                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
-                                ['space', '-', 'backspace']
-                                ],
-                        }
-                    });
-                </script>
-            </div>
             <!-- submit button submits data to registerLoad.php, Login button goes to Login.php -->
             <div class="row justify-content-around">
                 <a class="btn btn-light Register-Button" href="loginPage.php"><i class="fas fa-sign-in-alt"></i>Login</a>
