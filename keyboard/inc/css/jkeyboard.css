@@ -35,16 +35,14 @@
     -webkit-box-shadow: 0 0 3px #468db3;
   
     -webkit-box-shadow: inset 0 0 3px #468db3;
-  
-    margin: 10px 0 1px 14px;
-  
+    
     color: #f7faf7;
   
     border-radius: 5px;
   
-    width: 52px;
+    width: 36px;
   
-    height: 52px;
+    height: 36px;
   
     box-sizing: border-box;
   
@@ -90,7 +88,7 @@
   
   .jkeyboard .jline .space {
   
-    width: 456px;
+    width: 306px;
   
   }
   
@@ -130,6 +128,6 @@
   
     width: 69px;
   
-    background: url("../inc/assets/backspace.png") no-repeat center center;
+    background: url("../inc/assets/backspace.png.png") no-repeat center center;
   
   }
