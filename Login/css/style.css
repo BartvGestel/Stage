@@ -26,14 +26,14 @@ body{
 }
 
 .yourinfo{
-	background-color: darkblue;
+    background: #ffffffbe !important;
 	width: 200px;
-	border: 3px solid black;
+	border: 1px solid black;
 	border-radius: 20px;
 	text-align: center;
 	margin: auto;
 	margin-top: 50px;
-	color: white;
+	color: black;
 }
 
 .back{

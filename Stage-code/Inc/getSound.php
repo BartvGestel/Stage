@@ -25,7 +25,7 @@ foreach($rowsword as $keyword => $worddata){
 <?php
       
     ?>    
-    <div class="card" style="border: 3px solid black;">
+    <div class="card" style="border: 1px solid black;">
         <div class="alert " role="alert">
         <div id="score1">0</div>
         <div id="score2">0</div>

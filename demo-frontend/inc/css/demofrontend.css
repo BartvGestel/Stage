@@ -3,17 +3,19 @@ body{
 }
 
 .welcomeP{
-    background-color: black;
+    background: #ffffffbe !important;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     font-size: 35px;
     text-align: center;
     border: solid 3px white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    color: white;
+    color: black;
 }
 
 .welcomeA{
-    background-color: black;
+    background: #ffffffbe !important;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     font-size: 20px;
     border: solid 3px white;
     border-radius: 12px;
@@ -22,11 +24,11 @@ body{
     width: 260px;
     margin-top: 150px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .container a{
-    color: white;
+    color: black;
     text-decoration: none;    
 }
 
@@ -43,9 +45,10 @@ body{
 }
 
 .quote{
-    color: white;
+    color: black;
     text-align: center;
-    background-color: black;
+    background: #ffffffbe !important;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     margin-top: 80px;
     border: 3px solid white;
     border-radius: 30px;
