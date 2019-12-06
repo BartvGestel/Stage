@@ -149,9 +149,9 @@ function playAudio(url) {
         customLayouts: {
             selectable: ["english_capital"],
             english_capital: [
-                ['Ċ', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Ġ',],
-                ['Ħ', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ż',],
-                ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '\'', '.'],
+                ['ċ', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'ġ',],
+                ['ħ', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ż',],
+                ['z', 'x', 'c', 'v', 'b', 'n', 'm', '\'', '.'],
                 ['space', '-', 'backspace']
                 ],
         }
