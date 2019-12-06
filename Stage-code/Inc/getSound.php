@@ -64,8 +64,8 @@ foreach($rowsword as $keyword => $worddata){
 <input class="btn btn-light Check" type="submit" value="Check Word" name="submit">
 </form>
 <div id="keyboard"></div>
-<button id="hide">Hide keyboard</button>
-<button id="show">Show keyboard</button>
+<button id="hide" style="display: none;">Hide keyboard</button>
+<button id="show" style="display: none;">Show keyboard</button>
      </div>
     </div>
 <script>
@@ -202,6 +202,8 @@ $(".start").click(function(){
                                             {
                                                 $( "#keyboard" ).fadeIn( "slow")
                                                 $( ".Check" ).fadeIn( "slow")
+                                                $( "#hide" ).fadeIn( "slow")
+                                                $( "#show" ).fadeIn( "slow")
                                             });
                                         });
                                     });
