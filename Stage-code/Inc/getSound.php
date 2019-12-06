@@ -6,7 +6,7 @@ if($_SESSION['loggedIn'] == true)
 include("functions.php");
 include("../keyboard/keyboard/index.php");
 //getting the getSound function
-$sql="SELECT count(*) as total from sound";
+/*    $sql="SELECT count(*) as total from sound";
 $result = mysqli_query($conn, $sql);
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 foreach($rows as $key => $value){
@@ -19,7 +19,47 @@ $rowsword = $resultword->fetch_all(MYSQLI_ASSOC);
 foreach($rowsword as $keyword => $worddata){
     $word = $worddata['Word'];
     $audio = $worddata['SoundMrut'];
+} */
+
+$sql = "SELECT typeId FROM sound";
+$result = mysqli_query($conn, $sql);
+$words = array();
+
+if(mysqli_num_rows($result) > 0){
+while(($row =  mysqli_fetch_assoc($result))) {
+    $words[] = $row;
 }
+}
+$wordused = array();
+
+//print_r($words);
+do{
+    $n = rand(0, count($words) -1);
+}while(in_array($n, $wordused));
+//echo $n;
+//echo "<br>";
+
+
+
+foreach($words[$n] as $data){
+    array_push($wordused, $data);
+    $sqlword = "SELECT Word, soundMrut FROM sound WHERE typeId=".$data;
+    echo $sqlword;
+    $resultword = mysqli_query($conn, $sqlword);
+    $rowsword = $resultword->fetch_all(MYSQLI_ASSOC);
+    foreach($rowsword as $key => $worddata){
+        $word = $worddata['Word'];
+        $audio = $worddata['soundMrut'];
+    }
+}
+
+//print_r($wordused);
+
+/*for($i = 0; $i <= count($words) - 1; $i++){
+    foreach($words[$i] as $data){
+        
+    }
+}*/
 ?>
 
 <?php
