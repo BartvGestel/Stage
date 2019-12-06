@@ -93,9 +93,7 @@ var score2 = 0;
             echo "</div>";
             echo "
                 <script type=\"text/javascript\">
-                var correctAudio  = new Audio('audio/rightsound.mp3')
                 document.getElementById('score1').innerHTML = score1;
-                correctAudio.play();	
                 score1++;
                 </script>
                 ";
@@ -105,10 +103,8 @@ var score2 = 0;
             echo "incorrect";
             echo "</div>";
             echo "
-            <script type=\"text/javascript\">
-            var correctAudio1  = new Audio('audio/wrongsound.mp3')
+                <script type=\"text/javascript\">
                 document.getElementById('score2's).innerHTML = score2;
-                correctAudio1.play();
                 score2++;
                 </script>
                 ";
@@ -142,7 +138,6 @@ var score2 = 0;
 </head>
 <body>
 <script>
-
 //a function to play the music
 function playAudio(url) {
   var a = new Audio(url);
@@ -154,13 +149,8 @@ function playAudio(url) {
         customLayouts: {
             selectable: ["english_capital"],
             english_capital: [
-<<<<<<< HEAD
                 ['ċ', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'ġ',],
                 ['ħ', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ż',],
-=======
-                ['Ċ', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'Ġ',],
-                ['Ħ', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'Ż',],
->>>>>>> TomBart
                 ['z', 'x', 'c', 'v', 'b', 'n', 'm', '\'', '.'],
                 ['space', '-', 'backspace']
                 ],
@@ -170,14 +160,14 @@ function playAudio(url) {
 
     function right()
 	{
-        var image = document.getElementById("img1");
+		var image = document.getElementById("img1");
 		if (image) {
-        image.style.display = 'block';
+		image.style.display = 'block';
 		}
 	}
 	function wrong()
 	{
-        var images = document.getElementById("img2");
+		var images = document.getElementById("img2");
 		if (images) {
 		images.style.display = 'block';
 		}
