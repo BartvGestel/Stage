@@ -14,7 +14,7 @@ body {
     margin-top: 25px;
     margin-bottom: 50px;
     border-radius: 0px 0px 40px 40px;
-    min-height: 300px;
+    min-height: 340px;
     background: #ffffff8a !important;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -198,4 +198,16 @@ margin-left: 40%;
     margin-left: 1%;
     font-size: 30px;
     margin-top: -10px;
+}
+
+#hide{
+    background-color: white;
+    border: 1px;
+    border-radius: 12px;
+}
+
+#show{
+    background-color: white;
+    border: 1px;
+    border-radius: 12px;
 }
