@@ -64,8 +64,20 @@ foreach($rowsword as $keyword => $worddata){
 <input class="btn btn-light Check" type="submit" value="Check Word" name="submit">
 </form>
 <div id="keyboard"></div>
+<button id="hide">Hide keyboard</button>
+<button id="show">Show keyboard</button>
      </div>
     </div>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#keyboard").hide();
+  });
+  $("#show").click(function(){
+    $("#keyboard").show();
+  });
+});
+</script>
 
 <script> 
 var score1 = 0;
@@ -144,6 +156,7 @@ function playAudio(url) {
                 ],
         }
     });
+
 
     function right()
 	{

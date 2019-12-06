@@ -199,3 +199,15 @@ margin-left: 40%;
     font-size: 30px;
     margin-top: -10px;
 }
+
+#hide{
+    background-color: white;
+    border: 1px;
+    border-radius: 12px;
+}
+
+#show{
+    background-color: white;
+    border: 1px;
+    border-radius: 12px;
+}
