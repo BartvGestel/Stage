@@ -132,9 +132,9 @@ var score2 = 0;
             echo " Correct"; 
             echo "</div>";
             echo "
-                <script type=\"text/javascript\">
-                document.getElementById('score1').innerHTML = score1;
+                <script type='text/javascript'>
                 score1++;
+                document.getElementById('score1').innerHTML = score1;
                 </script>
                 ";
         }else{
@@ -143,17 +143,18 @@ var score2 = 0;
             echo "incorrect";
             echo "</div>";
             echo "
-                <script type=\"text/javascript\">
-                document.getElementById('score2's).innerHTML = score2;
+                <script type='text/javascript'>
                 score2++;
+                document.getElementById('score2').innerHTML = score2;
                 </script>
                 ";
         }
     }
 ?>
 
-<?php
 
+<?php
+    
 
 ?>
 <!DOCTYPE html>
